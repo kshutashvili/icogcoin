@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d02292b1-4f50-4dc8-8267-acda1490b7b4" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/BonusFinalizeAgent.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/CentrallyIssuedToken.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/DefaultFinalizeAgent.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/EthTranchePricing.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/ExtraFinalizeAgent.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/FlatPricing.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/GnosisWallet.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/Issuer.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/MintedEthCappedCrowdsale.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/MintedTokenCappedCrowdsale.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/PaymentForwarder.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/PreICOProxyBuyer.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/PresaleFundCollector.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/RelaunchedCrowdsale.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/TimeVault.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/TokenTranchePricing.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/TokenVault.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/UncappedCrowdsale.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/test/SimpleReleaseAgent.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/test/TestMigrationTarget.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contracts/test/TestSolidityAddressHash.sol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crowdsales/allocated-token-sale-acceptance-test.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crowdsales/allocated-token-sale-example.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crowdsales/example.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crowdsales/unit-test.yml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/AllocatedCrowdsale.sol" afterPath="$PROJECT_DIR$/contracts/AllocatedCrowdsale.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/BurnableCrowdsaleToken.sol" afterPath="$PROJECT_DIR$/contracts/BurnableCrowdsaleToken.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/BurnableToken.sol" afterPath="$PROJECT_DIR$/contracts/BurnableToken.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/Crowdsale.sol" afterPath="$PROJECT_DIR$/contracts/Crowdsale.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/CrowdsaleToken.sol" afterPath="$PROJECT_DIR$/contracts/CrowdsaleToken.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/FinalizeAgent.sol" afterPath="$PROJECT_DIR$/contracts/FinalizeAgent.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/FractionalERC20.sol" afterPath="$PROJECT_DIR$/contracts/FractionalERC20.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/Haltable.sol" afterPath="$PROJECT_DIR$/contracts/Haltable.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/MilestonePricing.sol" afterPath="$PROJECT_DIR$/contracts/MilestonePricing.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/MintableToken.sol" afterPath="$PROJECT_DIR$/contracts/MintableToken.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/NullFinalizeAgent.sol" afterPath="$PROJECT_DIR$/contracts/NullFinalizeAgent.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/PricingStrategy.sol" afterPath="$PROJECT_DIR$/contracts/PricingStrategy.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/ReleasableToken.sol" afterPath="$PROJECT_DIR$/contracts/ReleasableToken.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/SafeMath.sol" afterPath="$PROJECT_DIR$/contracts/SafeMath.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/SafeMathLib.sol" afterPath="$PROJECT_DIR$/contracts/SafeMathLib.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/StandardToken.sol" afterPath="$PROJECT_DIR$/contracts/StandardToken.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/UpgradeAgent.sol" afterPath="$PROJECT_DIR$/contracts/UpgradeAgent.sol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/UpgradeableToken.sol" afterPath="$PROJECT_DIR$/contracts/UpgradeableToken.sol" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-3" />
+    <option name="y" value="31" />
+    <option name="width" value="1922" />
+    <option name="height" value="851" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ico_golfco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ico_golfco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ico_golfco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ico_golfco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contracts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d02292b1-4f50-4dc8-8267-acda1490b7b4" name="Default" comment="" />
+      <created>1507923996066</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1507923996066</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-3" y="31" width="1922" height="851" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
