@@ -1,0 +1,179 @@
+
+    # Chain we are connected to.
+    # Either "mainnet" or "ropsten".
+    # Affects Etherscan verification process only.
+chain: mainnet
+
+    # Do we perform deployed contract source code verification on etherscan.io service.
+    # This is a semi automatic process using a Firefox browser.
+verify_on_etherscan: no
+browser_driver: chrome
+
+solc:
+
+        # This is the Solidity version tag we verify on EtherScan.
+        # For available versions see
+        # https://kovan.etherscan.io/verifyContract2
+        #
+        # See values in Compiler drop down.
+        # You can also get the local compiler version with:
+        #
+        #     solc --version
+        #
+        # Note that for EtherScan you need to add letter "v" at the front of the version
+        #
+        # Note: You need to have correct optmization settings for the compiler
+        # in populus.json that matches what EtherScan is expecting.
+        #
+  version: v0.4.14+commit.c2215d46
+
+        #
+        # We supply these to EtherScan as the solc settings we used to compile the contract.
+        # They must match values in populus.json compilication / backends section.
+        #
+  optimizations:
+    optimizer: true
+    runs: 500     
+
+    #
+    # Contracts section defines different smart contracts that
+    # are required to run the ICO.
+    #
+contracts:
+
+        # Team multisignature wallet.
+        #
+        # Replace with your predeployed multisignature wallet contract address.
+        #
+        # We assume this wallet has been deployed beforehand
+        # using wallet.gnosis.pm service and your team members
+        # have been set as the owners of this wallet.
+        #
+        # For testing purposes, e.g. on Kovan network,
+        # you can use any account on your geth / Parity here.
+        #
+        # Note: As the writing of this wallet.gnosis.pm service
+        # works only with mainnet.
+        #
+  team_multisig:
+    contract_name: MultiSigWallet
+    contract_file: MultiSigWallet.sol
+    address: '0x0042DFBaEA6b4BA018b7c23200b50Af3D97388a6'
+        #
+        # Token contract
+        #
+        # This contract represents ERC-20 token.
+        # It has transfer lock up functionality to prevent the token to be transferable
+        # until the ICO is over. Furthermore it has dynamic minting supply,
+        # so that the crowdsale contract will create new tokens as investment arrives in.
+        # This way, there is no need for a separate burn stage at the end of the crowdsale,
+        # as we never create the exceeding supply.
+        #
+        #
+  token: !!omap
+  - contract_name: BurnableCrowdsaleToken
+  - contract_file: BurnableCrowdsaleToken.sol
+  - arguments: !!omap
+    - _name: Golfcoin Token
+    - _symbol: GGHB
+    - _initialSupply: 1000000000000000000000000000
+    - _decimals: 18
+    - _mintable: false
+  - address: '0xa4c8829b5953357aee2011cbca17a6bd0dfc4afb'
+  - constructor_args: '0x00000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e00000000000000000000000000000000000000000033b2e3c9fd0803ce800000000000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e476f6c66636f696e20546f6b656e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000044747484200000000000000000000000000000000000000000000000000000000'
+  - libraries:
+      SafeMathLib: '0x0ee0dd008d7fc1d64febeb16a629736fd8f63ba0'
+        #
+        # Pricing strategy
+        #
+        # Pricing strategy defines the price of a token in the different stages of the crowdsale.
+        # Here we use milestone based pricing that has a different price for the token every week of the crowdale.
+        #
+        # We also give a preferred price for pre-ICO investors.
+        #
+        #
+  pricing_strategy: !!omap
+  - contract_name: MilestonePricing
+  - contract_file: MilestonePricing.sol
+  - arguments: !!omap
+    - _milestones:
+      - 1507852800
+      - 42000000000000
+      - 1509580800
+      - 49000000000000
+      - 1511308800
+      - 56000000000000
+      - 1513036800
+      - 0
+  - address: '0xefbae201ff5bb8ad0e0237eeb5f54ac572d671c7'
+  - constructor_args: '0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000059e0020000000000000000000000000000000000000000000000000000002632e314a0000000000000000000000000000000000000000000000000000000000059fa600000000000000000000000000000000000000000000000000000002c90b3981000000000000000000000000000000000000000000000000000000000005a14be00000000000000000000000000000000000000000000000000000032ee841b8000000000000000000000000000000000000000000000000000000000005a2f1c000000000000000000000000000000000000000000000000000000000000000000'
+  - libraries:
+      SafeMathLib: '0x4638a565b9b500403f251d3f8f4998d1e7c26bf1'
+  crowdsale: !!omap
+  - contract_name: AllocatedCrowdsale
+  - contract_file: AllocatedCrowdsale.sol
+  - arguments: !!omap
+    - _token: '0xa4c8829b5953357aee2011cbca17a6bd0dfc4afb'
+    - _pricingStrategy: '0xefbae201ff5bb8ad0e0237eeb5f54ac572d671c7'
+    - _multisigWallet: '0x0042DFBaEA6b4BA018b7c23200b50Af3D97388a6'
+    - _start: 1507852800
+    - _end: 1513036800
+    - _minimumFundingGoal: 18000000000000000000000000
+    - _beneficiary: '0x0066F57959c75Dd9a2eAD293bAF7794c569C43fC'
+  - address: '0x655dd30dac0e010394af8beff1456269661dc3fb'
+  - constructor_args: '0x000000000000000000000000a4c8829b5953357aee2011cbca17a6bd0dfc4afb000000000000000000000000efbae201ff5bb8ad0e0237eeb5f54ac572d671c70000000000000000000000000042dfbaea6b4ba018b7c23200b50af3d97388a60000000000000000000000000000000000000000000000000000000059e00200000000000000000000000000000000000000000000000000000000005a2f1c000000000000000000000000000000000000000000000ee3a5f48a68b5520000000000000000000000000000000066f57959c75dd9a2ead293baf7794c569c43fc'
+  - libraries:
+      SafeMathLib: '0x74223dbb90b4476bae2b01f7946f16a6b6aabd61'
+        #
+        # Because deploy_address controls whole supply,
+        # we do not create any supply dynamically,
+        # we do not need a finalizer.
+        #
+  finalize_agent: !!omap
+  - contract_name: NullFinalizeAgent
+  - contract_file: NullFinalizeAgent.sol
+  - arguments: !!omap
+    - _crowdsale: '0x655dd30dac0e010394af8beff1456269661dc3fb'
+  - address: '0xed8fab82ebd653171a7ef24a790ec5916afcc9d6'
+  - constructor_args: '0x000000000000000000000000655dd30dac0e010394af8beff1456269661dc3fb'
+  - libraries: {}
+
+    # Post-deployment actions connect contracts together.
+post_actions: |2
+
+  # Allow crowdsale contract to sell its token
+  token.transact({"from": deploy_address}).approve(crowdsale.address, 60000000*10**18)
+
+  # Make sure crowdsale contract and these accounts
+  # can transfer tokens despite transfer lock up
+  token.transact({"from": deploy_address}).setTransferAgent(team_multisig.address, True)
+  token.transact({"from": deploy_address}).setTransferAgent(crowdsale.address, True)
+  token.transact({"from": deploy_address}).setTransferAgent(finalize_agent.address, True)
+  token.transact({"from": deploy_address}).setTransferAgent(deploy_address, True)
+
+  # Do not do nothing at the end of the crowdsale
+  confirm_tx(crowdsale.transact({"from": deploy_address}).setFinalizeAgent(finalize_agent.address))
+
+  # Owner can release the token transfer when they fel its the time
+  confirm_tx(token.transact({"from": deploy_address}).setReleaseAgent(deploy_address))
+
+  # Set token upgrade master to team multisig to give the new token path
+  confirm_tx(token.transact({"from": deploy_address}).setUpgradeMaster(team_multisig.address))
+
+# Sanity check
+verify_actions: |
+  assert token.call().owner().lower() == deploy_address.lower()
+  assert token.call().released() == False
+  assert crowdsale.call().owner().lower() == deploy_address.lower()
+  assert crowdsale.call().multisigWallet().lower() == team_multisig.address.lower()
+  assert finalize_agent.call().isSane()
+
+  print('State: ' + str(crowdsale.call().getState()))
+
+  assert crowdsale.call().getState() == CrowdsaleState.Funding  # PreFunding for the final, as it is deployed pre-opening
+
+  # Do a test buy using a test address.
+  # This ensures are variables are set and the
+  # funds flow in the multisig wallet.
+  confirm_tx(crowdsale.transact({"from": deploy_address, "value": to_wei("0.01", "ether")}).buy())
+deploy_address: '0x0066F57959c75Dd9a2eAD293bAF7794c569C43fC'
